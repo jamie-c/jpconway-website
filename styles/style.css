@@ -1,0 +1,114 @@
+:root {
+    --pure-white: #EDECE6;
+    --title-color-gradient: linear-gradient(to right, #51AE8A 0%, #8A51AE 70%);
+    --nav-color-gradient: linear-gradient(to right, #51AE8A 40%, #8A51AE 100%);
+    --primary-link-color: #3a86ff;
+    --primary-link-hover-color: #0767FF;
+    --tricorn-black: #2F2F30;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Transat;
+    color: var(--tricorn-black);
+}
+
+html, body {
+    margin: 0;
+    background-color: var(--pure-white);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    padding: 10em 10em 0 10em;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-link-color);
+    font-weight: 500;
+    border-bottom: 2px solid var(--primary-link-color);
+}
+
+a:hover {
+    color: var(--primary-link-hover-color);
+    border-bottom: 2px solid var(--primary-link-hover-color);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav a {
+    border: unset;
+    margin: 1em 1.5em;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.3em;
+    color: var(--tricorn-black);
+}
+
+nav > a:hover {
+    border: unset;
+    background: var(--nav-color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.site-title > h1 {
+    margin: 1em 0 0 0;
+    font-size: 3em;
+    background: var(--title-color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer {
+    padding: 2em 10em;
+    background: var(--tricorn-black);
+    height: 150px;
+    flex: 1;
+}
+
+footer h2, footer p {
+    color: var(--pure-white);
+}
+
+footer a {
+    color: var(--pure-white);
+    border-bottom: 2px solid var(--pure-white);
+}
+
+footer  a:hover {
+    border: unset;
+    color:  var(--pure-white);
+}
+
+@media (max-width: 800px) {
+    header, footer {
+	padding: 5em;
+    }
+
+    nav {
+	flex-direction: column;
+	justify-content: flex-start;
+    }
+
+    nav a {
+	margin: 0.5em 0;
+    }
