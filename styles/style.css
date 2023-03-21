@@ -34,6 +34,7 @@ header {
 
 p {
     font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 a {
@@ -113,8 +114,9 @@ footer  a:hover {
     nav a {
 	margin: 0.5em 0;
     }
+}
 
-    @media only screen and (min-width: 731px) and (max-width: 1000px) {
+@media only screen and (min-width: 731px) and (max-width: 1000px) {
 	header, footer {
 	    padding: 1em 2em;
-    }
+}
