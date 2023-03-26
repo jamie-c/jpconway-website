@@ -9,7 +9,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Transat;
+    font-family: Transat, sans-serif;
     color: var(--tricorn-black);
 }
 
@@ -24,25 +24,18 @@ body {
     justify-content: space-between;
 }
 
-header, footer {
+header {
+    padding: 2em 1em;
     display: flex;
     flex-direction: row;
-}
-
-span.spacer {
-    flex: 1;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    height: 3em;
     overflow: scroll;
-    flex: 3;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.header-content, .footer, .footer-content {
-    flex: 3;
+.site-title > h1 > a {
+    border: none;
 }
 
 p {
@@ -66,7 +59,6 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    flex-wrap: wrap;
 }
 
 nav a {
@@ -87,36 +79,81 @@ nav > a:hover {
 }
 
 .site-title > h1 {
-    margin: 1em 0 0 0;
-    font-size: 3em;
+    margin: 0;
+    font-size: 1.3em;
     background: var(--title-color-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+main {
+    min-height: 100vh;
+    padding: 2em 10em;
+}
+
 footer {
-    display: flex;
-    flex-direction: row;
+    padding: 2em 10em;
     background: var(--tricorn-black);
     height: 150px;
+    flex: 1;
 }
 
-.footer {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer h2, .footer p {
+footer h2, footer p {
     color: var(--pure-white);
 }
 
-.footer a {
+footer a {
     color: var(--pure-white);
     border-bottom: 2px solid var(--pure-white);
 }
 
-.footer  a:hover {
+footer  a:hover {
     border: unset;
     color:  var(--pure-white);
 }
+.site-description h1 {
+    font-size: 3em;
+}
 
+.year {
+    width: 100%;
+    font-size: 2em;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+    font-size: 1.3em;
+}
+
+.date {
+    flex: 1;
+}
+
+.post-title {
+    flex: 4;
+}
+
+
+@media only screen and (max-width: 730px) {
+    header, footer {
+	padding: 2em;
+    }
+
+    nav {
+	flex-direction: column;
+	justify-content: flex-start;
+    }
+
+    nav a {
+	margin: 0.5em 0;
+    }
+}
+
+@media only screen and (min-width: 731px) and (max-width: 1000px) {
+	header, footer {
+	    padding: 1em 2em;
+}
