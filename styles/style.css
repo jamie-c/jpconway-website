@@ -9,7 +9,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Transat;
+    font-family: Transat, sans-serif;
     color: var(--tricorn-black);
 }
 
@@ -41,7 +41,7 @@ span.spacer {
     flex: 3;
 }
 
-.header-content, .footer, .footer-content {
+.header-content, .page-content, .footer, .footer-content {
     flex: 3;
 }
 
