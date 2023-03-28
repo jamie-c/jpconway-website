@@ -6,10 +6,6 @@ header {
     justify-content: space-between;
 }
 
-.site-title > h1 > a {
-    border: none;
-}
-
 .nav-links {
     flex: 10;
 }
@@ -74,6 +70,14 @@ input.nav-menu-button-input {
     margin: 0;
     font-size: 1.3em;
     flex: 1;
+}
+
+.site-title > h1 > a {
+    border: none;
+}
+
+h1.logo > a:hover {
+    -webkit-text-fill-color: var(--tricorn-black);
 }
 
 /* PAGE CONTENT STYLES */
