@@ -246,6 +246,7 @@ main {
         top: 4em;
         background: var(--pure-white);
         opacity: 90%;
+        z-index: 1;
       }
 
       .nav-menu-button-input:checked + label > .nav-menu-button {
@@ -258,12 +259,14 @@ main {
         top: 0;
         background-color: var(--pure-white);
         opacity: 90%;
+        z-index: 1;
       } 
 
       .nav-menu-button-input:checked ~ label ~ div ~ header .nav-links nav {
         width: 100vw;
         height: 100vh;
         padding: 1em 0.5em;
+        z-index: 999;
       }
 
   }
@@ -271,7 +274,7 @@ main {
   @media only screen and (max-width:1024px) {
     #jamie > div > img {
       display: block;
-      position: relative;
+      position: inherit;
       float: right;
       height: auto;
       max-width: 100%;
