@@ -22,7 +22,7 @@ input.nav-menu-button-input {
     justify-content: center;
     margin: 0;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     width: 3em;
     right: 0.5em;
     top: 0;
@@ -183,7 +183,7 @@ main {
     line-height: 30px;
     letter-spacing:2 px;
     text-align: left;
-    transition: color 0.5s, background 0.5s;
+    transition: color 0.5s;
     padding-left: 20px;
     border-bottom: none;
   }
@@ -224,11 +224,23 @@ main {
       .nav-menu-button-input:checked ~ label ~ .nav-menu-background {
         height: calc(100vh - 4em);
         width: 100vw;
-        position: absolute;
+        position: fixed;
         top: 4em;
         background: var(--pure-white);
         opacity: 90%;
       }
+
+      .nav-menu-button-input:checked + label > .nav-menu-button {
+        position: fixed;
+        z-index: 999;
+      } 
+      
+      .nav-menu-button-input:checked + label + div + header {
+        position: sticky;
+        top: 0;
+        background-color: var(--pure-white);
+        opacity: 90%;
+      } 
 
       .nav-menu-button-input:checked ~ label ~ div ~ header .nav-links nav {
         width: 100vw;
