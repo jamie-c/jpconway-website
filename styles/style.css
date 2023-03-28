@@ -104,7 +104,7 @@ footer {
     display: flex;
     flex-direction: row;
     background: var(--tricorn-black);
-    height: 150px;
+    padding: 2em 0;
 }
 
 .footer {
