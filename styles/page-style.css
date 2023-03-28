@@ -27,6 +27,10 @@ main {
     display: flex;
 }
 
+#jamie {
+    text-align: justify;
+}
+
 .site-description h1 {
     font-size: 3em;
 }
