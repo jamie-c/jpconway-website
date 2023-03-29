@@ -84,6 +84,7 @@ h1.logo > a:hover {
 main {
     min-height: 100vh;
     display: flex;
+    padding-bottom: 2em;
 }
 
 #jamie {
@@ -99,7 +100,7 @@ main {
   vertical-align: middle;
   width: 320px;
   border-radius: 6px;
-  transform: rotate(5deg);
+  transform: rotate(2.5deg);
   margin: 45px;
   top: -1em;
 }
