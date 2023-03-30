@@ -243,7 +243,7 @@ main {
   .expanding-menu input:checked ~ ul {
     width: 100%;
     min-height: 30px;
-    max-height: 100vh;
+    max-height: 3000vh;
   }
   
   .expanding-menu ul li a {
@@ -271,9 +271,8 @@ main {
     text-indent: 1em;
   }
 
-  ol.expanding-menu-list {
-    list-style-type: none;
-    list-style-position: outside;
+  li.indent-2x a {
+    text-indent: 2em;
   }
 
   @media only screen and (max-width:660px) {
