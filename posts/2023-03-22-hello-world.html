@@ -1,3 +1,13 @@
+<!---
+layout: post
+title: "Test Post"
+description: "Test post."
+category: articles
+tags: [test post]
+comments: true
+permalink: /posts/2023-03-22-test-post
+--->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,37 +54,31 @@
       </div>
       <span class="nav-links">
         <nav>
-          <a href="./about.html">About</a>
-	        <a href="./posts.html">Posts</a>
-	        <a href="./resume.html">Resumé</a>
-	        <a href="./links.html">Links</a>
+          <a href="../pages/about.html">About</a>
+	        <a href="../pages/posts.html">Posts</a>
+	        <a href="../pages/resume.html">Resumé</a>
+	        <a href="../pages/links.html">Links</a>
         </nav>
       </span>
     </header>
     <main>
       <span class="spacer"></span>
       <div class="page-content">
-        <div class="expanding-menu">
-          <input type="checkbox" id="menuToggle">
-          <label for="menuToggle">TABLE OF CONTENTS</label>
-          <ul class="expanding-menu-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#posts">Posts</a></li>
-              <ol class="expanding-menu-list">
-                <li><a href="#2023">2023</a></li>
-              </ol>
-          </ul>
-        </div>
-        <div id="posts" class="site-description">
-	        <h1>Posts</h1>
+        <div id="posts" class="post-title">
+	        <h1>Hello World!</h1>
         </div>
         <section class="year-container" id="2023">
-	          <h2 class="year">2023</h2>
-            <div class="posts">
-	            <div class="post-info">
-	              <div class="date"><b>March 22</b></div>
-	              <div class="post-title"><a href="../posts/2023-03-22-hello-world.html">Hello World!</a></div>
-	            </div>
+          <div class="post-metadata flex">
+            <div class="post-date flex">March 22, 2023</div><div class="vertical-bar"></div><div class="author flex"><a rel="noreferrer noopener" target="_blank" href="https://twitter.com/jamie_conway">jamie_conway</a></div>
+          </div>
+            <div class="post-content">
+                <p>Hi! I'm Jamie and I'm excited to share my first  post with you!</p>
+                <p>Over the past few weeks, I've been coding my own website by hand, and I've finally published it to the world.</p>
+                <p>I decided to code my website by hand because I wanted to challenge myself and improve my web development skills. I've implemented what I've learned through OKCoders, which, to date we've only covered html and css!</p>
+                <p>Although it was a steep learning curve, I'm really proud of what I've created and I hope you enjoy checking it out.</p>
+                <p>My website is all about the tools and technologies I have learned so I can get hired.</p>
+                <p>If you're interested in coding your own website by hand, I'd love to share some of the resources and tools that helped me along the way. And if you have any feedback or suggestions for how I can improve my site, I'm all ears!</p>
+                <p>Thanks for taking the time to read this!</p>
             </div>
         </section>
       </div>

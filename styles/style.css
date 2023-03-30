@@ -2,6 +2,8 @@
     --pure-white: #EDECE6;
     --title-color-gradient: linear-gradient(to right, #51AE8A 0%, #8A51AE 70%);
     --nav-color-gradient: linear-gradient(to right, #51AE8A 40%, #8A51AE 100%);
+    --bright-color: #51AE8A;
+    --dark-color: #8A51AE;
     --primary-link-color: #3a86ff;
     --primary-link-hover-color: #0767FF;
     --tricorn-black: #2F2F30;

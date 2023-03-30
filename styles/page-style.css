@@ -10,6 +10,10 @@ header {
     flex: 10;
 }
 
+.flex {
+  display: flex;
+}
+
 /* RESPONSIVE NAVBAR MENU */
 input.nav-menu-button-input {
     display: none;
@@ -109,9 +113,17 @@ main {
     font-size: 3em;
 }
 
+/* POSTS PAGE STYLES */
 .year {
     width: 100%;
     font-size: 2em;
+    color: var(--dark-color);
+}
+
+.year-container .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .post-info {
@@ -125,10 +137,57 @@ main {
 
 .date {
     flex: 1;
+    font-weight: 200;
+    font-size: 0.8em;
 }
 
 .post-title {
     flex: 4;
+}
+
+/* INDIVIDUAL POST PAGE STYLES */
+.post-title h1 {
+  font-size: 3.5em;
+  font-style: italic;
+}
+
+.post-metadata {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 2em;
+}
+
+.year-container > .post-metadata > .post-date {
+  padding-right: 2em;
+  color: var(--dark-color);
+  vertical-align: center;
+  font-weight: 200;
+  font-size: 0.8em;
+}
+
+.vertical-bar {
+  height: 2em;
+  width: 0;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.year-container > .post-metadata .author {
+  padding-left: 2em;
+  height: 100%;
+  align-items: center;
+  flex: 1;
+}
+
+.year-container > .post-metadata .author > a {
+  font-size: 0.8em;
+  border-bottom: none;
+}
+
+.post-content {
+  padding-top: 1em;
 }
 
 /* EXPANDING MENU STYLES */
