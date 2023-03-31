@@ -245,6 +245,14 @@ main {
     min-height: 30px;
     max-height: 3000vh;
   }
+
+  .expanding-menu input:checked ~ ul.four-rows {
+    max-height: 120px;
+}
+
+  .expanding-menu input:checked ~ ul.six-rows {
+    max-height: 180px;
+}
   
   .expanding-menu ul li a {
     color: var(--tricorn-black);
