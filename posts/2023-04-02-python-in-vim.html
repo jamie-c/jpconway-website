@@ -1,0 +1,109 @@
+<!---
+layout: post
+title: "Run Current Python File Inside Vim"
+description: "Running a python script inside vim."
+category: articles
+tags: [python, vim, post]
+comments: true
+permalink: /posts/2023-04-02-python-in-vim.html
+--->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Posts - Jamie Conway!</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="author"
+	  content="Jamie Conway"
+    />
+    <meta name="twitter:site"
+	  content="@jamie_conway"
+    />
+    <meta name="description"
+          content="Written pieces, talks, and other bits by Jamie Conway."
+    />
+    <link rel="icon" type="image/png" href="../images/jamie-conway-favicon.png">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/page-style.css" />
+  </head>
+  <body>
+    <input class="nav-menu-button-input" type="checkbox" id="menuIcon">
+    <label for="menuIcon">
+      <div class="nav-menu-button">
+        <svg class="ham hamRotate" viewBox="0 0 100 100" width="50" onclick="this.classList.toggle('active')">
+          <path
+                class="line top"
+                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+          <path
+                class="line middle"
+                d="m 70,50 h -40" />
+          <path
+                class="line bottom"
+                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+        </svg>
+      </div>
+    </label>
+    <div class="nav-menu-background"></div>
+    <header>
+      <div class="site-title">
+        <h1 class="logo"><a href="../index.html">Jamie Conway!</a></h1>
+      </div>
+      <span class="nav-links">
+        <nav>
+          <a href="../pages/about.html">About</a>
+	        <a href="../pages/posts.html">Posts</a>
+  	      <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jamieconway/details/skills/">Skills</a>
+	        <a href="../pages/links.html">Links</a>
+        </nav>
+      </span>
+    </header>
+    <main>
+      <span class="spacer"></span>
+      <div class="page-content">
+        <div id="posts" class="post-title">
+	        <h1>Run a Python Script In Vim</h1>
+        </div>
+        <section class="year-container" id="2023">
+          <div class="post-metadata flex">
+            <div class="post-date flex">April 02, 2023</div><div class="vertical-bar"></div><div class="author flex"><a rel="noreferrer noopener" target="_blank" href="https://twitter.com/jamie_conway">jamie_conway</a></div>
+          </div>
+            <div class="post-content">
+                <p>I've been learing to use vim as a primary text editor. Once I realized the focus is moving the cursor, everything clicked for me.</p>
+                <p>Navigating text is quick, and once that is mastered, deleting, moving, copying, and pasting is easy. For example, if you want to move your cursor to the end of the line, type <kbd>$</kbd>. If you want to delete to the end of the line, type <kbd>d</kbd><kbd>$</kbd>.</p>
+                <p>This isn't the place to cover all the commands for vim, but to share configuring vim to run a python file that is in the current buffer with the press of a key.</p>
+                <pre class="codeblock">
+                <code class="code">
+                  " Map the F5 key to run a Python script inside Vim.
+                  " We map F5 to a chain of commands here.
+                  " :w saves the file.
+                  " &lt;CR&gt; (carriage return) is like pressing the enter key.
+                  " !clear runs the external clear screen command.
+                  " !python3 % executes the current file with Python.
+                  nnoremap &lt;f5&gt; :w &lt;CR&gt;:!clear &lt;CR&gt;:!python3 % &lt;CR&gt;
+                </code> 
+                </pre>
+                <p>If you add the above code to your .vimrc file, which should be located at ~/.vimrc, and have a phython script open, pressing F5 will save your file, clear the screen, and display the results of the python output. Getting back to your file is as simple as pressing Enter.</p>
+            </div>
+        </section>
+      </div>
+      <span class="spacer"></span>
+    </main>
+    <footer>
+      <span class="spacer"></span>
+      <div class="footer">
+        <span class="spacer"></span>
+        <div class="footer-content">
+          <h2>Jamie Conway</h2>
+          <p>Find me on <a href="https://github.com/jamie-c">Github</a>.</p>
+          <p>Find me on <a href="https://www.linkedin.com/in/jamieconway/">LinkedIn</a>.</p>
+        </div>
+        <span class="spacer"></span>
+      </div>
+      <span class="spacer"></span>
+    </footer>
+  </body>
+</html>
