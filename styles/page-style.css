@@ -113,6 +113,37 @@ main {
     font-size: 3em;
 }
 
+/* LINKS PAGE STYLES */
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5em;
+  font-size: 1.3em;
+}
+
+.link-info > .date {
+  font-size: 1.3em;
+}
+
+.link-image {
+    width: 50%;
+}
+
+.link-image-link {
+    border-bottom: none;
+}
+
+.link-image-link:hover {
+    border-bottom: none;
+}
+
 /* POSTS PAGE STYLES */
 .year {
     width: 100%;
@@ -367,6 +398,10 @@ main {
         height: 100vh;
         overflow: hidden;
     }
+
+      .link-image {
+        width: 100%;
+      }
   }
 
   @media only screen and (max-width:1024px) {
