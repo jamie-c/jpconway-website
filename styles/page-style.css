@@ -317,9 +317,11 @@ main {
 
 /* STYLES FOR CODE BLOCKS */
   .codeblock {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--tricorn-black);
-    padding: 0 1em;
+    padding: 2em;
     border-radius: 6px;
   }
 
@@ -337,7 +339,6 @@ main {
   }
 
   pre.codeblock > code {
-      left: -5em;
       display: block;
       white-space: normal;
   }
