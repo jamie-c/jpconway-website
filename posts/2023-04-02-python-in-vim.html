@@ -72,9 +72,8 @@ permalink: /posts/2023-04-02-python-in-vim.html
             <div class="post-date flex">April 02, 2023</div><div class="vertical-bar"></div><div class="author flex"><a rel="noreferrer noopener" target="_blank" href="https://twitter.com/jamie_conway">jamie_conway</a></div>
           </div>
             <div class="post-content">
-                <p>I've been learing to use vim as a primary text editor. Once I realized the focus is moving the cursor, everything clicked for me.</p>
-                <p>Navigating text is quick, and once that is mastered, deleting, moving, copying, and pasting is easy. For example, if you want to move your cursor to the end of the line, type <kbd>$</kbd>. If you want to delete to the end of the line, type <kbd>d</kbd><kbd>$</kbd>.</p>
-                <p>This isn't the place to cover all the commands for vim, but to share configuring vim to run a python file that is in the current buffer with the press of a key.</p>
+                <p>Sometimes its useful, when editing a python script in vim, to quickly runn the script to test the output. There are a million reasons to run a python script in vim, and it's easy to do it with the press of a key.</p>
+                <p>Here's the code to configure vim to run a python file that is in the current buffer with the press of the <kbd>F5</kbd> key.</p>
                 <pre class="codeblock">
                 <code class="code">
                   " Map the F5 key to run a Python script inside Vim.
@@ -86,7 +85,7 @@ permalink: /posts/2023-04-02-python-in-vim.html
                   nnoremap &lt;f5&gt; :w &lt;CR&gt;:!clear &lt;CR&gt;:!python3 % &lt;CR&gt;
                 </code> 
                 </pre>
-                <p>If you add the above code to your .vimrc file, which should be located at ~/.vimrc, and have a phython script open, pressing F5 will save your file, clear the screen, and display the results of the python output. Getting back to your file is as simple as pressing Enter.</p>
+                <p>If you add the above code to your .vimrc file, which should be located at ~/.vimrc, and have a phython script open, pressing <kbd>F5</kbd> will save your file, clear the screen, and display the results of the python output. Getting back to your file is as simple as pressing Enter.</p>
             </div>
         </section>
       </div>
