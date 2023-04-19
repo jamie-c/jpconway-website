@@ -309,7 +309,7 @@ main {
       white-space: pre-wrap;
   }
 
-  @media only screen and (max-width:660px) {
+  @media only screen and (max-width:800px) {
     .nav-menu-button {
         display: flex;
     }
@@ -317,11 +317,11 @@ main {
     nav {
         flex-direction: column;
         position: fixed;
-        top: 3em;
+        top: 0;
         right: 0;
         align-items: end;
         justify-content: flex-start;
-        width: 0;
+        width: 100vw;
         height: 0;
         padding: 0;
         overflow: hidden;
@@ -356,12 +356,17 @@ main {
       } 
 
       .nav-menu-button-input:checked ~ label ~ div ~ header .nav-links nav {
+        top: 3em;
         width: 100vw;
         height: 100vh;
         padding: 1em 0.5em;
         z-index: 999;
       }
 
+      .remove-scroll {
+        height: 100vh;
+        overflow: hidden;
+    }
   }
 
   @media only screen and (max-width:1024px) {
