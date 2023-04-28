@@ -2,6 +2,14 @@
 
 const postsInfo = [
     {
+        title: "Triplestores",
+        fileName: "2023-04-12-triplestores.html",
+        datePosted: "April 12",
+        monthPosted: 04,
+        yearPosted: 2023,
+        dateCode: 20230412,
+    }, 
+    {
         title: "Hello World!",
         fileName: "2023-03-22-hello-world.html",
         datePosted: "March 22",
