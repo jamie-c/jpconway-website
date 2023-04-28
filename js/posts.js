@@ -15,6 +15,6 @@ const postsInfo = [
         datePosted: "April 02",
         monthPosted: 04,
         yearPosted: 2023,
-        dateCode: 20230322,
+        dateCode: 20230402,
     }
 ];
