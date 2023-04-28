@@ -8,6 +8,12 @@ const ghHistory = 'commits';
 // Set the branch name to use
 const ghBranch = 'main';
 
+// Function to set link attributes for rel and target
+let setRelTarget = (frag) => {
+  frag.setAttribute('rel', 'noopener noreferrer');
+  frag.setAttribute('target', '_blank');
+}
+
 // Function to build a Github URL with the given suffix
 let buildGhUrl = (suffix) => {
   return ghBaseUrl + '/' + suffix + '/' + ghBranch + location.pathname;
@@ -30,11 +36,13 @@ const pGH = document.createElement('p');
 // Create a new a element for the raw source link
 const rawLink = document.createElement('a');
 rawLink.setAttribute('href', ghRawUrl);
+setRelTarget(rawLink);
 rawLink.textContent = 'Github';
 
 // Create a new a element for the history link
 const histLink = document.createElement('a');
 histLink.setAttribute('href', ghHistoryUrl);
+setRelTarget(histLink);
 histLink.textContent = 'history';
 
 // Add the text and link elements to the p element
@@ -51,7 +59,7 @@ divGH.append(pGH);
 fragmentGH.append(divGH);
 
 // Find the element on the page to add the Github links to
-const mainElement = document.getElementsByClassName('page-content')[0];
+const mainElement = document.getElementsByClassName('footer')[0];
 
 // Add the DocumentFragment with the link elements to the main element
 mainElement.append(fragmentGH);

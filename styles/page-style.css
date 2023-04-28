@@ -345,10 +345,15 @@ main {
 
   /* STYLES FOR GITHUB SENTENCE */
   #gh-links {
-    text-align: center;
+    display: inline-block;
     position: relative;
-    bottom: 0;
+    top: 0;
     padding-top: 4em;
+    width: 100%;
+  }
+
+  #gh-links p {
+    text-align: center;
   }
 
   @media only screen and (max-width:800px) {
