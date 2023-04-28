@@ -13,7 +13,10 @@
 //     },
 // ];
 
+// get current year
 const currentYear = new Date().getFullYear();
+// get element in expanding menu to append links later
+const tableOfContents = document.getElementsByClassName('expanding-menu-list')[0];
 
 // Build the html that contains the post information.
 const createPostHtml = (item) => {
@@ -21,7 +24,6 @@ const createPostHtml = (item) => {
     const title = item.title;
     const file = item.fileName;
     const date = item.datePosted;
-    const year = item.yearPosted;
 
     const fragment = new DocumentFragment;
     const postInfoDiv = document.createElement('div');
@@ -75,23 +77,66 @@ const createMonthHtml = (month) => {
     return fragment;
 }
 
+// Define function to create year link element
+const createLiForMenu = (post, timeScale) => {
+    // post is post object, timeScale is string i.e. 'year' or 'month'
+    timeScale = timeScale.toLowerCase();
+    const year = post.yearPosted;
+    const monthNum = post.monthPosted.toString().padStart(2, '0');
+    const monthStr = post.datePosted.match(/[a-zA-Z]/g).join('');
+
+    // create fragment
+    const fragment = document.createDocumentFragment();
+
+    // create li and a elements 
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+
+    // if year, set class 'indent'; if month, set class 'indent-2x
+    switch (timeScale) {
+        case 'year':
+            li.setAttribute('class', 'indent');
+            a.setAttribute('href', '#' + year);
+            a.textContent = year;
+            break;
+        case 'month':
+            li.setAttribute('class', 'indent-2x');
+            a.setAttribute('href', '#' + year + '-' + monthNum);
+            a.textContent = monthStr;
+            break;
+        default:
+            break;
+    }
+    
+    li.append(a);
+    fragment.append(li);
+    return fragment;
+}
+
 // Append posts to .page-content
 const pageContent = document.getElementsByClassName('page-content');
+// sort posts
 const compareNumbers = (a, b) => {
     return -(a.dateCode - b.dateCode);
 }
+
 postsInfo.sort(compareNumbers).forEach((post) => {
     let postDate = post.yearPosted + '-' + post.monthPosted.toString().padStart(2, '0');
 
     if (document.getElementById(post.yearPosted) == null) {
         let theYear = createYearHtml(post.yearPosted);
         pageContent[0].append(theYear);
+        tableOfContents.append(createLiForMenu(post, 'year'));
     };
     let yearSection = document.getElementById(post.yearPosted);
     if (document.getElementById(postDate) == null) {
         let theMonth = createMonthHtml(postDate);
         yearSection.append(theMonth);
+        tableOfContents.append(createLiForMenu(post, 'month'));
     };
     let monthSection = document.getElementById(postDate);
     monthSection.append(createPostHtml(post));
 });
+
+
+  
