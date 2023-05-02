@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Community Detection Comparison - Jamie Conway!</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="author"
+	  content="Jamie Conway"
+    />
+    <meta name="twitter:site"
+	  content="@jamie_conway"
+    />
+    <meta name="description"
+          content="Written pieces, talks, and other bits by Jamie Conway."
+    />
+    <link rel="icon" type="image/png" href="../images/jamie-conway-favicon.png">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/page-style.css" />
+  </head>
+  <body>
+    <input class="nav-menu-button-input" type="checkbox" id="menuIcon">
+    <label for="menuIcon">
+      <div class="nav-menu-button">
+        <svg class="ham hamRotate" viewBox="0 0 100 100" width="50" onclick="this.classList.toggle('active')">
+          <path
+                class="line top"
+                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+          <path
+                class="line middle"
+                d="m 70,50 h -40" />
+          <path
+                class="line bottom"
+                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+        </svg>
+      </div>
+    </label>
+    <div class="nav-menu-background"></div>
+    <header>
+      <div class="site-title">
+        <h1 class="logo"><a href="../index.html">Jamie Conway!</a></h1>
+      </div>
+      <span class="nav-links">
+        <nav>
+          <a href="../pages/about.html">About</a>
+	        <a href="../pages/posts.html">Posts</a>
+  	      <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jamieconway/details/skills/">Skills</a>
+	        <a href="../pages/links.html">Links</a>
+        </nav>
+      </span>
+    </header>
+    <main>
+      <span class="spacer"></span>
+      <div class="page-content">
+        <div id="posts" class="post-title">
+	        <h1>Community Detection Comparison</h1>
+        </div>
+        <section class="year-container" id="2023">
+          <div class="post-metadata flex">
+            <div class="post-date flex">May 02, 2023</div><div class="vertical-bar"></div><div class="author flex"><a rel="noreferrer noopener" target="_blank" href="https://twitter.com/jamie_conway">jamie_conway</a></div>
+          </div>
+            <div class="post-content">
+              <h2>To run community detection on a graph database implemented in neo4j using the Graph Data Science (GDS) plugin, follow these steps:</h2>
+              <p>Install the GDS plugin: You can install the GDS plugin by following the instructions in the <a rel="noopener noreferrer" target="_blank" href="https://neo4j.com/docs/graph-data-science/current/installation/">neo4j documentation</a>.</p>
+              <p>Load your graph into neo4j: Load your graph into neo4j using the Cypher query language.</p>
+              <p>Create a graph projection: Create a graph projection to perform <a rel="noopener noreferrer" target="_blank" href="https://neo4j.com/docs/graph-data-science/current/algorithms/community/">community detection</a> on a subset of the graph or to simplify the graph structure.</p>
+              <p>Run community detection using the GDS plugin: Use the GDS plugin to run community detection on the graph projection. You can choose from several community detection algorithms such as Louvain, Label Propagation, and Triangle Count.</p>
+              <p>Evaluate the results: Evaluate the results of the community detection algorithm using metrics such as modularity, coverage, and density.</p>
+              <h2>To compare the results of running community detection on the graph database using the GDS plugin and running community detection externally using the python package NetworkX, follow these steps:</h2>
+              <p>Export the graph from neo4j: Export the graph from neo4j in a format that can be read by <a rel="noopener noreferrer" target="_blank" href="https://networkx.org/documentation/stable/tutorial.html">NetworkX</a>, such as GraphML or GEXF.</p>
+              <p>Import the graph into NetworkX: Import the graph into NetworkX using one of the built-in graph reading functions.</p>
+              <p>Run community detection using NetworkX: Use one of the built-in <a rel="noopener noreferrer" target="_blank" href="https://networkx.org/documentation/stable/reference/algorithms/community.html">community detection algorithms in NetworkX</a>, such as Louvain or Label Propagation, to detect communities in the graph.</p>
+              <p>Evaluate the results: Evaluate the results of the community detection algorithm using the same metrics as in the GDS plugin approach.</p>
+              <p>Compare the results: Compare the results of the two approaches based on the evaluation metrics. If the results are similar, you can conclude that both approaches are valid. If the results are different, you may need to investigate further to understand the reasons for the differences.
+            </div>
+        </section>
+      </div>
+      <span class="spacer"></span>
+    </main>
+    <footer>
+      <span class="spacer"></span>
+      <div class="footer">
+        <span class="spacer"></span>
+        <div class="footer-content">
+          <h2>Jamie Conway</h2>
+          <p>Find me on <a href="https://github.com/jamie-c">Github</a>.</p>
+          <p>Find me on <a href="https://www.linkedin.com/in/jamieconway/">LinkedIn</a>.</p>
+        </div>
+        <span class="spacer"></span>
+      </div>
+      <span class="spacer"></span>
+    </footer>
+  <script src="../js/nav.js"></script>
+  <script src="../js/gh.js"></script>
+  </body>
+</html>
