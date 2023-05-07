@@ -1,3 +1,8 @@
+# Data Modeling Flavors of Food
+Have you ever wondered what makes your favorite dish so delicious? Or why certain flavors pair well together? Developing a data model for storing and categorizing ingredients and recipes, along with their associated flavors, tastes, and aromas, can help answer these questions and provide a wealth of valuable information.
+When modeling a dataset of food ingredients or recipes, there are a number of factors to consider if we want to classify recipes and be able to discover novel flavor pairings or combine novel ingredients to create a classic flavor profile.
+I'll touch on some of the basics of flavor in this post, and how I might begin to develop a data model for storing such information.
+
 ## Taste
 Sweet, salty, sour, bitter, umami. Every bite of food you have taken has been a combination of these five tastes.
 We taste them individually as well as in concert, working together to produce simplicity and complexity on the palate.
@@ -72,12 +77,12 @@ We can categorize whole food ingredients using properties such as:
 
 Additional information that would be helpful to link would be:
 
-    nutritionalInfo      - full nutrition facts
-    containsGluten       - will it work in a gluten free meal?
-    macroNutrients       - (i.e. Calories or protein)
-    commonTechnique      - what are the most common ways of preparing the ingredient)
-    tips                 - anything important or relevant not covered in the other topics
-    botanicalRelatives   - sometimes serves as inspiration for dishes or food pairings
-    culinarySubstitues   - what foods would substitute well for a given ingredient in a dish?
-    strongFlavorPairings - what foods/flavors pair very well, or classically with a given item?
-    weakFlavorPairings   - what foods/flavors pair somewhat well?
+    nutritionalInfo      -> full nutrition facts
+    containsGluten       -> will it work in a gluten free meal?
+    macroNutrients       -> (i.e. Calories or protein)
+    commonTechnique      -> what are the most common ways of preparing the ingredient)
+    tips                 -> anything important or relevant not covered in the other topics
+    botanicalRelatives   -> sometimes serves as inspiration for dishes or food pairings
+    culinarySubstitues   -> what foods would substitute well for a given ingredient in a dish?
+    strongFlavorPairings -> what foods/flavors pair very well, or classically with a given item?
+    weakFlavorPairings   -> what foods/flavors pair somewhat well?
