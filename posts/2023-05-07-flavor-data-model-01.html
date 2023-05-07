@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flavor Data Model - Jamie Conway!</title>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport"
+	  content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="author"
+	  content="Jamie Conway"
+    />
+    <meta name="twitter:site"
+	  content="@jamie_conway"
+    />
+    <meta name="description"
+          content="Written pieces, talks, and other bits by Jamie Conway."
+    />
+    <link rel="icon" type="image/png" href="../images/jamie-conway-favicon.png">
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/page-style.css" />
+  </head>
+  <body>
+    <input class="nav-menu-button-input" type="checkbox" id="menuIcon">
+    <label for="menuIcon">
+      <div class="nav-menu-button">
+        <svg class="ham hamRotate" viewBox="0 0 100 100" width="50" onclick="this.classList.toggle('active')">
+          <path
+                class="line top"
+                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+          <path
+                class="line middle"
+                d="m 70,50 h -40" />
+          <path
+                class="line bottom"
+                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+        </svg>
+      </div>
+    </label>
+    <div class="nav-menu-background"></div>
+    <header>
+      <div class="site-title">
+        <h1 class="logo"><a href="../index.html">Jamie Conway!</a></h1>
+      </div>
+      <span class="nav-links">
+        <nav>
+          <a href="../pages/about.html">About</a>
+	        <a href="../pages/posts.html">Posts</a>
+  	      <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jamieconway/details/skills/">Skills</a>
+	        <a href="../pages/links.html">Links</a>
+        </nav>
+      </span>
+    </header>
+    <main>
+      <span class="spacer"></span>
+      <div class="page-content">
+        <div id="posts" class="post-title">
+          <h1>Data Modeling Flavors of Food</h1>
+        </div>
+        <section class="year-container" id="2023">
+          <div class="post-metadata flex">
+            <div class="post-date flex">May 02, 2023</div><div class="vertical-bar"></div><div class="author flex"><a rel="noreferrer noopener" target="_blank" href="https://twitter.com/jamie_conway">jamie_conway</a></div>
+          </div>
+            <div class="post-content">            
+	      <p>Have you ever wondered what makes your favorite dish so delicious? Or why certain flavors pair well together? Developing a data model for storing and categorizing ingredients and recipes, along with their associated flavors, tastes, and aromas, can help answer these questions and provide a wealth of valuable information.
+When modeling a dataset of food ingredients or recipes, there are a number of factors to consider if we want to classify recipes and be able to discover novel flavor pairings or combine novel ingredients to create a classic flavor profile.
+I'll touch on some of the basics of flavor in this post, and how I might begin to develop a data model for storing such information.</p>
+	      <h2>Taste</h2>
+	      <p>Sweet, salty, sour, bitter, umami. Every bite of food you have taken has been a combination of these five tastes.
+We taste them individually as well as in concert, working together to produce simplicity and complexity on the palate.
+Bitterness suppresses sweetness.
+Saltiness stimulates the appetite.
+Sweetness is satiating.
+Tastes are heavily influenced by freshness and ripeness, which is the number one reason to eat as locally as possible!</p>
+	      <h3>Sweetness</h3>
+	      <p>It takes the greatest quantity of sweetness to register on the taste buds. However, we do still perceive and appreciate the balancing affect that lesser amounts of sweetness have on flavors.
+Pair sweetness with bitterness, sourness, and saltiness.</p>
+	      <h3>Saltiness</h3>
+	      <p>Salt is nature's flavor enhancer. Talk to any top chef, and they'll tell you it is the single most important taste for making savory food delicious. Think about it - salt is to savory as sweet is to dessert. Saltiness in a meal can come from various sources other than salt. Certain cheeses like pecorino romano, soy sauce or coconut aminos, and even celery contribute saltiness.</p>
+	      <h3>Sourness</h3>
+	      <p>The second most important flavor enhancer in both savory and sweet dishes is sourness.
+Add a spark of brightness to a meal by adding a squeeze of a lemon or a splash of vinegar. Balancing the acidity with the other tastes is essential to any meal.</p>
+	      <h3>Bitterness</h3>
+	      <p>We humans are, perhaps, most sensitive to bitterness, of all the tastes. It doesn't take much. Bitterness balances sweetness and also cuts richness - think of the bitterness of very dark chocolate in a rich dessert.</p>
+	      <h3>Umami</h3>
+	      <p>The taste of savoriness. Think of a savory or meaty mouthfeel. This taste is noticable in aged cheeses like blue cheese, fermented foods like miso, mushrooms, and sea vegetables.
+The name umami came about with the discovery of monosodium glutamate (msg), which is a naturally occuring amino acid salt that is formed when glutamic acid and salt combine during the cooking process. This can come from meals such as tomato soup, or miso soup. Miso soup is made not only with miso, but a broth called dashi, which made with a sea vegetable called kombu. FWIW, I would never reccomend adding msg powder to any food, but it's important to acknowledge where msg naturally appears in cooking and to understand it's role in flavor.</p>
+	      <h2>Mouthfeel</h2>
+	      <p>The mouth not only senses taste, but registers other senses such as touch, temperature, and texture that play roles in flavor.</p>
+	      <h3>Temperature</h3>
+	      <p>The temperature of food affects our ability to perceive flavors. For example, ice cream that is delicious just out of the freezer may very well be far too sweet when warm and melted - coldness dulls sweetness. Not only can the temperature affect the flavor, but also the enjoyment of the dish as in a cold gazpacho in the heat of summer vs hot tomato soup on a crisp, cold autumn afternoon.</p>
+	      <h3>Texture</h3>
+	      <p>Texture is central to a food's ability to captivate or please. We all enjoy many different textures: think of the comforting creaminess of perfect mashed potatoes, or the fun crisp snap of a chip. Texture can activate and invigorate our other senses.</p>
+	      <h3>Piquancy</h3>
+	      <p>This is the sensation most commonly referred to as "hot". Comes in varying degrees of sharpness or spiciness and is especially associated with chile peppers.</p>
+	      <h3>Astringency</h3>
+	      <p>A puckering or drying sensation. Caused by tannins in red wine and strong black tea. Also found in cranberries and some unripe fruits.</p>
+	      <h2>Aroma</h2>
+	      <p>Aroma contributes as much as 80% (or more) of flavor. Aromatic ingredients like fresh herbs, spices, or lemon zest can enhance to aroma of a dish, which enhances its flavor.
+While there are 5 basic tastes, there is an almost infinite number of aromatic notes that contribute to the flavor of food!
+Most aromas tend to be characterized as sweet or savory.</p>
+	      <h3>Sweet</h3>
+	      <p>Associated with sweetners, fruits, certain vegetables, herbs, and spices.</p>
+	      <h3>Savory</h3>
+	      <p>Associated with "meatiness", alliums such as onions and garlic. Can also include cheesiness, smokiness, and spiciness.</p>
+	      <h3>Pungency</h3>
+	      <p>Refers to the taste and aroma of foods. Think of horseradish and mustard - irritating yet pleasing sensations in the nose and mouth.</p>
+	      <h3>Chemesthesis</h3>
+	      <p>Refers to the tingling sensations like those from carbonated beverages, the heat sensations from chili peppers, the cooling sensation from mints, or the mini-explosions of pop rocks candy.</p>
+	      <p>Then there is the x-factor found in flavor. The factor or factors that greatly affect one's ability to perceive and experience flavor. This can be anything from visual, to emotional, to mental, or spiritual factors. One person may have fond memories from their youth eating fresh blackberries out of a blackberry patch on their grandparents property, while another may be allergic. They will both have different reactions to blackberry flavor! Think of someone who eats only plant-based foods compared to someone who is an omnivore - they'll likely have very different experiences in a steakhouse or vegan cafe, while the food in both places may be considered excellent by many.</p>
+	      <p>To sum:
+We can categorize whole food ingredients using properties such as:</p>
+	      <pre class="codeblock"><code class="code">
+		  taste                   = ['sweetness', 'saltiness', 'sourness', 'bitterness', 'umami']<br />
+		  mouthfeel               = ['temperature', 'texture', 'piquancy', 'astringency']<br />
+		  aroma                   = ['sweet', 'savory', 'pungency', 'chemesthesis']<br />
+		  primaryFlavorNotes      = ""<br />
+		  briefTextureDescription = ""<br />
+		  volume                  = ['quiet', 'mild', 'medium', 'loud']<br />
+		  seasonalPeak            = ['winter', 'spring', 'summer', 'autumn']<br />
+	      </code></pre>
+	      <p>Additional information that would be helpful to link would be:</p>
+	      <pre class="codeblock"><code class="code">
+		  nutritionalInfo      -&gt; full nutrition facts<br />
+		  containsGluten       -&gt; will it work in a gluten free meal?<br />
+		  macroNutrients       -&gt; (i.e. Calories or protein)<br />
+		  commonTechnique      -&gt; what are the most common ways of preparing the ingredient)<br />
+		  tips                 -&gt; anything important or relevant not covered in the other topics<br />
+		  botanicalRelatives   -&gt; sometimes serves as inspiration for dishes or food pairings<br />
+		  culinarySubstitues   -&gt; what foods would substitute well for a given ingredient in a dish?<br />
+		  strongFlavorPairings -&gt; what foods/flavors pair very well, or classically with a given item?<br />
+		  weakFlavorPairings   -&gt; what foods/flavors pair somewhat well?<br />
+	      </code></pre>
+            </div>
+        </section>
+      </div>
+      <span class="spacer"></span>
+    </main>
+    <footer>
+      <span class="spacer"></span>
+      <div class="footer">
+        <span class="spacer"></span>
+        <div class="footer-content">
+          <h2>Jamie Conway</h2>
+          <p>Find me on <a href="https://github.com/jamie-c">Github</a>.</p>
+          <p>Find me on <a href="https://www.linkedin.com/in/jamieconway/">LinkedIn</a>.</p>
+        </div>
+        <span class="spacer"></span>
+      </div>
+      <span class="spacer"></span>
+    </footer>
+  <script src="../js/nav.js"></script>
+  <script src="../js/gh.js"></script>
+  </body>
+</html>
